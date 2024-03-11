@@ -587,6 +587,10 @@ html {
   position: absolute;
 }
 
+.relative{
+  position: relative;
+}
+
 .sticky{
   position: sticky;
 }
@@ -608,21 +612,12 @@ html {
   margin-bottom: auto;
 }
 
-.my-1{
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-
 .ml-auto{
   margin-left: auto;
 }
 
 .mt-1{
   margin-top: 0.25rem;
-}
-
-.mb-1{
-  margin-bottom: 0.25rem;
 }
 
 .block{
@@ -765,6 +760,11 @@ html {
   font-style: italic;
 }
 
+.text-pink-200{
+  --tw-text-opacity: 1;
+  color: rgb(251 207 232 / var(--tw-text-opacity));
+}
+
 .text-sky-900{
   --tw-text-opacity: 1;
   color: rgb(12 74 110 / var(--tw-text-opacity));
@@ -775,13 +775,12 @@ html {
   color: rgb(228 228 231 / var(--tw-text-opacity));
 }
 
-.text-pink-200{
-  --tw-text-opacity: 1;
-  color: rgb(251 207 232 / var(--tw-text-opacity));
-}
-
 .underline{
   text-decoration-line: underline;
+}
+
+.opacity-100{
+  opacity: 1;
 }
 
 .ring{
@@ -796,6 +795,12 @@ html {
 
 .transition-colors{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all{
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -815,6 +820,28 @@ html {
 
 .group:hover .group-hover\:block{
   display: block;
+}
+
+.group.open .group-open\:-top-2{
+  top: -0.5rem;
+}
+
+.group.open .group-open\:top-2{
+  top: 0.5rem;
+}
+
+.group.open .group-open\:rotate-45{
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group.open .group-open\:-rotate-45{
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group.open .group-open\:opacity-0{
+  opacity: 0;
 }
 
 @media (min-width: 768px){
